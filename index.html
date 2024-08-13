@@ -1,0 +1,741 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Quick Start Guide FBW A32NX</title>
+  </head>
+  <body>
+    <header class="main-header">
+      <div id="logo-container">
+        <img
+          id="logo"
+          alt="Logo de FBW"
+          src="https://docs.flybywiresim.com/assets/images/FBW-Tail.png"
+        />
+        <div id="logo-text">FlyByWire Docs Recreation</div>
+      </div>
+    </header>
+    <main id="main-doc">
+      <nav class="navbar" id="navbar">
+        <header>Pilot's Corner</header>
+        <a class="nav-link" href="#Overview">Overview</a>
+        <a class="nav-link" href="#Preflight">Preflight</a>
+        <a class="nav-link" href="#Starting_the_Aircraft"
+          >Starting the Aircraft</a
+        >
+        <a class="nav-link" href="#Preparing_the_MCDU">Preparing the MCDU</a>
+        <a class="nav-link" href="#Engine_Start_and_Taxi"
+          >Engine Start and Taxi</a
+        >
+        <a class="nav-link" href="#Takeoff_Climb_and_Cruise"
+          >Takeoff Climb and Cruise</a
+        >
+        <a class="nav-link" href="#Descent_Planning_and_Descent"
+          >Descent Planning and Descent</a
+        >
+        <a class="nav-link" href="#Approach_and_ILS_Landing"
+          >Approach and ILS Landing</a
+        >
+        <a class="nav-link" href="#After_Landing_and_Taxi_to_Gate"
+          >After Landing and Taxi to Gate</a
+        >
+        <a class="nav-link" href="#Powering_Down">Powering Down</a>
+      </nav>
+      <div class="content-container">
+        <section class="main-section" id="Overview">
+          <header>Overview</header>
+          <div class="overview">
+            <p>
+              Welcome to the FlyByWire A32NX Quick Start Guide. This guide is
+              designed to get you up and flying as quickly as possible. The
+              A32NX is a free, open-source modification for Microsoft Flight
+              Simulator that aims to improve the default A320neo in every way.
+              This guide will cover the basics of setting up the aircraft,
+              starting the engines, and taking off. Let's get started!
+            </p>
+            <p>For Simulation Use Only</p>
+            <hr />
+          </div>
+        </section>
+        <section class="main-section" id="Preflight">
+          <header>Preflight</header>
+          <div class="preflight">
+            <p>
+              Before you start your flight in earnest, we have included various
+              features in the A32NX that assist in configuring the aircraft and
+              in-flight support. Some of these features require the aircraft to
+              be powered on. Additionally, these guides will be linked in the
+              appropriate locations throughout the beginner guide.
+            </p>
+            <hr />
+            <h2>Nav Data</h2>
+            <p>
+              The AIRAC cycle (nav data version) of MSFS's nav data is updated
+              during MSFS's regular sim updates. It's important to take stock of
+              what AIRAC cycle you are currently using for your flight planning
+              and if it matches the current AIRAC cycle in MSFS. When using
+              simBrief or other planning tools with older AIRAC cycles, you may
+              encounter
+              <code>NOT IN DATABASE</code>, <code>AWY/WPT Mismatch</code> OR the
+              flight plan import may fail due to an outdated/incorrect AIRAC
+              cycle.
+            </p>
+            <p>
+              Owning a Navigraph subscription gives you access to their
+              standalone nav data add-on for MSFS that pairs with their simBrief
+              flight planning. It will provide you with an up-to-date AIRAC
+              alongside any revisions, and ensure compatibility when importing
+              from simBrief or planning your flight manually.
+            </p>
+            <h2>Flight Planning</h2>
+            <p>
+              We highly recommend not using the built-in MSFS flight planner
+              (World Map). We recommend using SimBrief as it is a great resource
+              that provides routing and other information to successfully plan
+              your flight.
+            </p>
+            <div class="highlight-div">
+              <p class="highlight">Important Links for Flight Planning</p>
+              <ul>
+                <li>
+                  <a href="https://www.simbrief.com/" target="_blank"
+                    >SimBrief Website</a
+                  >
+                  (Flight Planning)
+                </li>
+                <li>
+                  <a
+                    href="https://albar965.github.io/littlenavmap.html"
+                    target="_blank"
+                    >Little Nav Map</a
+                  >
+                  (Flight Planning and Charts)
+                </li>
+                <li>
+                  <a href="https://chartfox.org/" target="_blank">ChartFox</a>
+                  (Charts)
+                </li>
+                <li>
+                  <a href="https://navigraph.com/" target="_blank">Navigraph</a>
+                  (Flight Planning and Charts)
+                  <span><strong>Requires Subscription</strong></span>
+                </li>
+                <li>
+                  See our
+                  <a
+                    href="https://docs.flybywiresim.com/fbw-a32nx/feature-guides/cFMS/"
+                    target="_blank"
+                    >Custom Flight Management System</a
+                  >
+                  page and the
+                  <a
+                    href="https://docs.flybywiresim.com/fbw-a32nx/feature-guides/cFMS/#special-notes"
+                    target="_blank"
+                    >special notes section</a
+                  >
+                  section.
+                </li>
+              </ul>
+            </div>
+            <h2>Flight Plan Import</h2>
+            <p>
+              If you wish to expedite the process of inputting your flight plan
+              on the MCDU, we have incorporated a simBrief import function on
+              the MCDU. Our EFB can also display your generated OFP within MSFS.
+            </p>
+            <div class="important-div">
+              <p class="important-p">IMPORTANT</p>
+              <p>
+                If you plan to import the flight plan from SimBrief, do not
+                select an arrival airport on the MSFS world menu or flight
+                planner. Doing this "initializes" the <code>FROM/TO</code> field
+                when loading into your flight, removing the
+                <code>INIT REQ.</code> option from the <code>INIT A</code> page.
+              </p>
+            </div>
+            <h2>Flight Plan Discontinuities</h2>
+            <p>
+              When inputting your flight plan into the MCDU, discontinuities
+              appearing is an intended feature. The page below describes how to
+              handle these when encountered during your preflight preparations.
+            </p>
+            <h2>Payload</h2>
+            <p>
+              To configure your aircraft, we have provided options onboard the
+              aircraft to load fuel and passengers / baggage. See the following
+              page and note any advisories.
+            </p>
+            <h2>EFB Navigraph Charts</h2>
+            <p>
+              To help with navigation during your flight, our flyPad EFB can
+              connect to your Navigraph account to provide access to all the en
+              route charts for your flight!
+            </p>
+          </div>
+        </section>
+        <section class="main-section" id="Starting_the_Aircraft">
+          <header>Starting the Aircraft</header>
+          <div class="Starting-Aircraft">
+            <p>
+              This guide will assist you with starting your aircraft. It
+              includes images to assist you with understanding the locations of
+              all buttons and switches.
+            </p>
+            <div class="important-div">
+              <p class="important-p">Disclaimer</p>
+              <p>
+                The level of detail in this guide is meant to teach a FlyByWire
+                A320neo beginner to start the aircraft correctly.
+              </p>
+              <p>
+                A <em>beginner</em> is defined as someone familiar with flying a
+                GA aircraft or different types of airliners. Aviation
+                terminology and know-how is a requirement to fly any airliner,
+                even in Microsoft Flight Simulator.
+              </p>
+              <p>
+                You will find many great videos on YouTube on how to fly the
+                FlyByWire A32NX.
+                <br />
+                Check out the FlyByWire YouTube Channel as well:
+                <a
+                  href="https://www.youtube.com/c/FlyByWireSimulations/playlists"
+                  >FlyByWire on YouTube</a
+                >
+              </p>
+            </div>
+            <hr />
+            <h2>Prerequisites</h2>
+            <p>The aircraft is in a cold and dark state at a gate.</p>
+            <h2>Cockpit Preparation</h2>
+            <p>
+              To start off, we will begin by doing a few pre-checks in all areas
+              of the cockpit to ensure the aircraft is in a normal position
+              before turning on the batteries.
+            </p>
+            <p>
+              We begin by looking down at the
+              <a
+                href="https://docs.flybywiresim.com/pilots-corner/a32nx-briefing/flight-deck/"
+                ><strong>bottom pedestal</strong></a
+              >
+            </p>
+            <ul>
+              <li>Place the Parking Brake handle in the ON position</li>
+              <li>Ensure the Speed Brakes have been disarmed/retracted</li>
+              <li>Flaps are retracted</li>
+              <li>Weather Radar is switched off</li>
+              <li>Engine Masters 1 and 2 are in the OFF position</li>
+              <li>Engine Mode selector is set to NORM</li>
+              <li>Thrust Levers are idle</li>
+            </ul>
+            <p>
+              We then direct our attention to the main panel and make sure the
+              following is set:
+            </p>
+            <ul>
+              <li>Gear Lever is down</li>
+            </ul>
+            <p>
+              Then we look up at the overhead panel. Make sure the following are
+              in the set position before moving on to starting the aircraft:
+            </p>
+            <ul>
+              <li>Wiper selectors are in the off position</li>
+            </ul>
+            <hr />
+            <h2>Overhead Panel</h2>
+            <h3>Electrical Section</h3>
+            <img
+              alt="GPU"
+              src="https://docs.flybywiresim.com/pilots-corner/assets/beginner-guide/starting-aircraft/gpuoff.png"
+            />
+            <p><u>Batteries</u></p>
+            <p>
+              We begin with turning on batteries BAT 1 AND 2. We will hear
+              chimes indicating the batteries are on.
+            </p>
+            <p>
+              Batteries only power a small part of the aircraft. For the rest,
+              either ground power, APU or a running engine is required.
+            </p>
+            <p><u>Ground Power</u></p>
+            <p>
+              If ground power is available, we should see a green AVAIL light on
+              the EXT PWR button. Push on this button to give power to the
+              aircraft.
+            </p>
+            <div class="highlight-div">
+              <p class="highlight">Ground Power Not Available</p>
+              <p>
+                Some gates or stands are not equipped with ground power. In
+                Microsoft Flight Simulator, this happens regularly at smaller
+                airports. This is not a bug, but a realistic situation. You can
+                then either try to call a Ground Power Unit (GPU) if available
+                at the airport or just use the APU as described in the next
+                step.
+              </p>
+            </div>
+            <p><u>Flight Warning System Initialization</u></p>
+            <div class="important-div">
+              <p>
+                Various aspects of this system is being reworked and it may not
+                function as intended. This section will be updated once the
+                rework is complete.
+              </p>
+            </div>
+            <p>
+              The Flight Warning System (FWS) is a system that monitors the
+              aircraft and alerts the crew of any abnormalities. The FWS
+              initializes as soon as AC Bus power (External Power or APU)
+              becomes available.
+            </p>
+            <p>
+              The initialization takes about 50 seconds and is indicated by the
+              FWS FWC 1+2 FAULT message on the ECAM. The message will disappear,
+              and various alarms may play once the initialization is complete.
+            </p>
+            <p>
+              Some cockpit setup steps should not be done before this
+              initialization is complete. Especially, the fire tests should not
+              be done before this initialization is complete.
+            </p>
+            <img
+              alt="fws-init-ecam"
+              src="https://docs.flybywiresim.com/pilots-corner/assets/beginner-guide/starting-aircraft/fws-init-ecam.png"
+            />
+            <p><u>APU Fire Test</u></p>
+            <img
+              alt="Fire Panel"
+              src="https://docs.flybywiresim.com/pilots-corner/assets/beginner-guide/starting-aircraft/fire-panel.png"
+            />
+            <p>
+              Before starting the APU, we should do a fire test. This is done by
+              pressing and holding the TEST button on the fire panel.
+            </p>
+            <p>
+              If external power is available, the fire test will light up the
+              Fire Extinguish button and the Squib Discharge button on the fire
+              panel, and the ECAM will show the appropriate warnings.
+            </p>
+            <img
+              id="apu-test"
+              alt="apu-fire-test"
+              src="https://docs.flybywiresim.com/pilots-corner/assets/beginner-guide/starting-aircraft/apu-fire-test.png"
+            />
+            <img
+              id="ecam-apu"
+              alt="apu-fire-test-ecam"
+              src="https://docs.flybywiresim.com/pilots-corner/assets/beginner-guide/starting-aircraft/apu-fire-test-ecam.png"
+            />
+            <p>
+              If external power is not available at this point, we do a battery
+              only fire test. In this case, only the fire panel buttons will
+              show the test lights. The ECAM remains dark.
+            </p>
+            <p><u>APU</u></p>
+            <p>
+              We now start the APU. Without external power, this will provide us
+              with electrical power to set up the aircraft. The startup
+              typically lasts about 1 minute.
+            </p>
+            <p>
+              To do this, we simply push on the APU MASTER SW and START. The APU
+              should be on within one minute.
+            </p>
+            <img
+              alt="APU Start"
+              src="https://docs.flybywiresim.com/pilots-corner/assets/beginner-guide/starting-aircraft/APU-Start.png"
+            />
+            <div class="highlightimg-div">
+              <p class="highlightimg">COVID SOP</p>
+              <div class="highlight-content">
+                <img
+                  src="https://docs.flybywiresim.com/pilots-corner/assets/beginner-guide/starting-aircraft/apu-bleed.png"
+                  alt="Bleed"
+                  class="highlight-img"
+                />
+                <div class="p-apu-text">
+                  <p>
+                    Many airlines require the air conditioning to be running
+                    before passengers enter the aircraft, and remain on until
+                    deboarding is complete to ensure proper air circulation.
+                    Therefore, turning on the APU even with ground power is now
+                    required, as the air conditioning packs need the APU Bleed
+                    air to function whenever the engines are not running.
+                    Especially if a ground air conditioning unit is not
+                    available.
+                  </p>
+                  <p>Make sure to turn on APU Bleed on the overhead panel.</p>
+                </div>
+              </div>
+            </div>
+            <div class="highlight-div">
+              <p class="highlight">Engine Start</p>
+              <p>APU Bleed Air is required for starting the engines.</p>
+            </div>
+
+            <section class="expandable-apu">
+              <details>
+                <summary class="expandable-apu-header">
+                  Real World APU and A/C Start Procedure
+                </summary>
+                <div class="expandable-apu-content">
+                  <p>
+                    The above process is a simplified version of how real-world
+                    airlines start up the APU (documented in their SOP -
+                    Standard Operating Procedures).
+                  </p>
+                  <p>
+                    Here is a description of an actual, real-world procedure of
+                    a well-known airline.
+                  </p>
+                  <ul>
+                    <li>
+                      Check A/C Packs are OFF before powering the aircraft
+                    </li>
+                    <li>Set APU MASTER switch to ON</li>
+                    <li>
+                      Press APU START
+                      <ul>
+                        <li>
+                          The APS3200 APU equipped on the A32NX is able to
+                          activate the start signal during its self-test
+                          sequence after power-up, so there is no need to wait
+                          after pressing the master switch. Some A320s are
+                          equipped with a different APU that requires
+                          approximately a 3-second wait before the start button
+                          becomes operative.
+                        </li>
+                      </ul>
+                    </li>
+                    <li>
+                      Wait until APU START button shows "AVAIL" (or check on
+                      lower ECAM APU page)
+                    </li>
+                    <li>Wait 1 min (use CHRONO to time this)</li>
+                    <li>Set APU BLEED to ON</li>
+                    <li>Wait 1 min (use CHRONO to time this)</li>
+                    <li>
+                      Set PACK 1 to ON (due to COVID, many airlines require both
+                      A/C PACKS to be ON)
+                    </li>
+                  </ul>
+                  <p>
+                    The two waiting steps are to avoid any APU oil fumes to get
+                    into the air conditioning.
+                  </p>
+                </div>
+              </details>
+            </section>
+            <section class="crew-oxygen-supply">
+              <h2>Crew Oxygen Supply</h2>
+              <p>
+                After powering the aircraft, we turn on the crew oxygen supply
+                by pushing on the button, diminishing the white OFF light.
+              </p>
+              <img
+                alt="Crew Supply Button"
+                src="https://docs.flybywiresim.com/pilots-corner/assets/beginner-guide/starting-aircraft/Oxygen.png"
+              />
+            </section>
+            <section class="adirs">
+              <h2>ADIRS alignment</h2>
+              <p>
+                To align the Inertial Reference System (or IRS), we turn the 3
+                knobs to the NAV position. This will then start the IRS
+                alignment, for which we can view the progress on the ECAM
+                display.
+              </p>
+              <img
+                alt="ADIRS Knobs"
+                src="https://docs.flybywiresim.com/pilots-corner/assets/beginner-guide/starting-aircraft/adirsaligned.png"
+              />
+              <img
+                alt="ADIRS ECAM"
+                src="https://docs.flybywiresim.com/pilots-corner/assets/beginner-guide/starting-aircraft/ecamirs.png"
+              />
+            </section>
+            <section class="exterior-lighting">
+              <h2>Exterior Lighting</h2>
+              <p>
+                To indicate that the aircraft is powered from the exterior, we
+                turn on the NAV & LOGO light.
+              </p>
+              <p>
+                Following this, we set the STROBE light to the AUTO position.
+              </p>
+              <img
+                alt="lights panel"
+                src="https://docs.flybywiresim.com/pilots-corner/assets/beginner-guide/starting-aircraft/exterior-lighting.png"
+              />
+            </section>
+            <section class="interior-lighting">
+              <h2>Interior Lighting</h2>
+              <h3><u>Cabin</u></h3>
+              <p>
+                We can turn on a few lights to help with visibility inside if it
+                is too dark inside the cockpit.
+              </p>
+              <img
+                alt="cabin lights panel"
+                src="https://docs.flybywiresim.com/pilots-corner/assets/beginner-guide/starting-aircraft/int-lt.png"
+              />
+              <ul>
+                <li>
+                  The DOME light has 3 settings to choose from. We can set it
+                  into the OFF position, the DIM position, or even the BRT
+                  position.
+                </li>
+                <li>
+                  The OVHD INTEG LT will allow us to see the outlines of the
+                  overhead panel. Turning the knob will adjust its brightness.
+                </li>
+              </ul>
+              <h3><u>Passenger Signs</u></h3>
+              <img
+                alt="Passenger signs Panel"
+                src="https://docs.flybywiresim.com/pilots-corner/assets/beginner-guide/starting-aircraft/passenger-signs.png"
+              />
+              <ul>
+                <li>Seat belts sign - Set to ON</li>
+                <li>No smoking sign - Set to AUTO</li>
+                <li>Arm the emergency exit lights - Set to ARM</li>
+              </ul>
+              <div class="highlight-div">
+                <p class="highlight">Real World Procedure</p>
+                <p>
+                  The Seat Belts sign is not turned on until fueling is
+                  complete.
+                </p>
+              </div>
+            </section>
+            <section class="cabin-pressure">
+              <h2>Cabin Pressure</h2>
+              <img
+                alt="Cabin Pressure Panel"
+                src="https://docs.flybywiresim.com/pilots-corner/assets/beginner-guide/starting-aircraft/cabin-pressure.png"
+              />
+              <p>
+                Looking up just a bit, we find the LDG ELEV knob. This simply
+                means the landing elevation, which should be in the AUTO
+                position.
+              </p>
+            </section>
+            <section class="cabin-temperature">
+              <h2>Cabin Temperature</h2>
+              <img
+                alt="Cabin Temperature Panel"
+                src="https://docs.flybywiresim.com/pilots-corner/assets/beginner-guide/starting-aircraft/aircond.png"
+              />
+              <p>
+                Managing the temperatures of the cabin is necessary as well.
+                Simply rotate the 3 knobs as needed.
+              </p>
+            </section>
+            <section class="cabin-hydraulic-fuel">
+              <h2>Hydraulic and Fuel Section</h2>
+              <p>
+                Looking up at the <b>hydraulic panel</b>, we ensure that there
+                are no white lights visible.
+              </p>
+              <p>
+                Just below the hydraulic panel, we find the fuel panel. Turn on
+                all 6 fuel pumps until the white OFF light is no longer visible.
+              </p>
+              <img
+                alt="Cabin Hydraulic and Fuel Section"
+                src="https://docs.flybywiresim.com/pilots-corner/assets/beginner-guide/starting-aircraft/fuelpumps.png"
+              />
+            </section>
+            <section class="eng-fire-test">
+              <img
+                alt="Fire Panel"
+                src="https://docs.flybywiresim.com/pilots-corner/assets/beginner-guide/starting-aircraft/fire-panel.png"
+              />
+              <p>
+                To perform an engine fire test, hold down the TEST button for
+                each of them for 5 seconds minimum to ensure the lights and
+                aural warnings are working as expected. Checking the ECAM during
+                the test will also show if the ECAM is performing as expected
+                during a fire.
+              </p>
+              <img
+                alt="Engine 1 Fire Test"
+                src="https://docs.flybywiresim.com/pilots-corner/assets/beginner-guide/starting-aircraft/eng-fire-test.png"
+              />
+              <img
+                alt="Fire ECAM"
+                src="https://docs.flybywiresim.com/pilots-corner/assets/beginner-guide/starting-aircraft/eng-fire-test-ecam.png"
+              />
+              <hr />
+            </section>
+            <hr />
+            <section class="main-panel">
+              <h2>Main Panel</h2>
+              <h3>Displays</h3>
+              <p>
+                The brightness for each display can be adjusted to make them
+                more readable.
+              </p>
+              <p>
+                For the PFD and ND, the knobs are in the same location. Look
+                left (or right when in first officer seat) of the PFD and find
+                the brightness knobs for them. Simply turn both knobs as
+                required.
+              </p>
+              <img
+                alt="pfd and nd knobs"
+                src="https://docs.flybywiresim.com/pilots-corner/assets/beginner-guide/starting-aircraft/pfdndbright.png"
+              />
+              <p>
+                For the ECAM upper and lower display, look just in front of the
+                throttles and find the brightness knobs. Just like the PFD and
+                ND knobs, rotate them as required.
+              </p>
+              <img
+                alt="ecam knobs"
+                src="https://docs.flybywiresim.com/pilots-corner/assets/beginner-guide/starting-aircraft/ecam-knobs.png"
+              />
+              <p>
+                For the ISIS display brightness (just left of the upper ECAM),
+                use the + and - buttons until the brightness is suitable. While
+                we are at the ISIS display, set the current QNH.
+              </p>
+              <img
+                alt="isis display"
+                src="https://docs.flybywiresim.com/pilots-corner/assets/beginner-guide/starting-aircraft/isis.png"
+              />
+            </section>
+            <hr />
+            <section class="radio-panel">
+              <h2>Radio Panel</h2>
+              <p>
+                Looking down at the radio panel, set the RMP 1 to the active
+                ATIS frequency and set the standby frequency to the ground
+                frequency.
+              </p>
+              <img
+                alt="radio panel"
+                src="https://docs.flybywiresim.com/pilots-corner/assets/beginner-guide/starting-aircraft/radiopanel.png"
+              />
+              <p>
+                After setting correct frequencies, locate the BARO reference on
+                the glareshield. We can set the barometer to either inHg or hPa
+                by turning the gray inner selector behind the knob. For this
+                flight, ensure that we are set to QNH. This can be changed by
+                "pushing" on the BARO knob (the tooltip will have an upwards
+                arrow).
+              </p>
+              <div class="highlight-div">
+                <p class="highlight">A note on QNH and QFE</p>
+                <p>
+                  Choosing between using QNH and QFE is a little beyond the
+                  scope of this guide. In most cases, we will be flying using
+                  QNH.
+                </p>
+                <ul>
+                  <li>
+                    <b>QNH:</b> Altimeter indicates height above sea level.
+                  </li>
+                  <li>
+                    <b>QFE:</b> Altimeter indicates height above reference
+                    elevation in use (airfield or touchdown). This setting is
+                    usually tied to a procedure in use by the airfield, where
+                    when on the ground the altimeter will read 0.
+                  </li>
+                </ul>
+              </div>
+              <p>
+                Just below the barometer reference, turn on the FD. A green
+                light indicates it has been turned on.
+              </p>
+              <img
+                alt="ECAM fuel page"
+                src="https://docs.flybywiresim.com/pilots-corner/assets/beginner-guide/starting-aircraft/ecam-fuel.png"
+              />
+              <p>
+                If we do not have enough fuel for the flight, we can refuel via
+                the flyPad EFB Fuel Page.
+              </p>
+            </section>
+            <hr />
+            <section class="before-start-end">
+              <p>
+                At this point, we would have completed 5/7 task on the Before
+                Start section on the FlyByWire A32NX checklist.
+              </p>
+              <img
+                alt="Before Start Checklist"
+                src="https://docs.flybywiresim.com/pilots-corner/assets/beginner-guide/starting-aircraft/beforestart.png"
+              />
+              <p>This concludes the Starting the Aircraft guide.</p>
+            </section>
+          </div>
+        </section>
+        <section class="main-section" id="Preparing_the_MCDU">
+          <header>Preparing the MCDU</header>
+          <div class="mcdu">
+            <p>GO to</p>
+          </div>
+        </section>
+        <section class="main-section" id="Engine_Start_and_Taxi">
+          <header>Engine Start and Taxi</header>
+          <div class="engine-and-taxi">
+            <p>test</p>
+            <p>test</p>
+          </div>
+        </section>
+        <section class="main-section" id="Takeoff_Climb_and_Cruise">
+          <header>Takeoff Climb and Cruise</header>
+          <div class="to-climb-cruise">
+            <p>test</p>
+            <p>test</p>
+          </div>
+        </section>
+        <section class="main-section" id="Descent_Planning_and_Descent">
+          <header>Descent Planning and Descent</header>
+          <div class="descent">
+            <p>test</p>
+            <p>test</p>
+          </div>
+        </section>
+        <section class="main-section" id="Approach_and_ILS_Landing">
+          <header>Approach and ILS Landing</header>
+          <div class="approach">
+            <p>test</p>
+            <p>test</p>
+          </div>
+        </section>
+        <section class="main-section" id="After_Landing_and_Taxi_to_Gate">
+          <header>After Landing and Taxi to Gate</header>
+          <div class="after-landing">
+            <p>test</p>
+            <p>test</p>
+          </div>
+        </section>
+        <section class="main-section" id="Powering_Down">
+          <header>Powering Down</header>
+          <div class="powering-down">
+            <p>test</p>
+            <p>test</p>
+          </div>
+        </section>
+      </div>
+    </main>
+  </body>
+  <footer>
+    <span
+      >Go and check the FBW official documentation:
+      <a
+        target="_blank"
+        id="tribute-link"
+        href="https://docs.flybywiresim.com/pilots-corner/beginner-guide/overview/"
+        >Link</a
+      >
+    </span>
+    <span>Made by Sebastian Martinez Moncada :)</span>
+  </footer>
+</html>

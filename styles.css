@@ -1,0 +1,309 @@
+@media (min-width: 1025px) {
+  .main-header {
+    padding: 2em 10em;
+  }
+}
+
+html {
+  font-family: "cascadia code", sans-serif;
+}
+
+body {
+  background-color: #171e2c;
+}
+
+/** Header **/
+
+.main-header {
+  background-color: #0e131b;
+  color: #fff;
+  padding: 2em 10em;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  position: fixed;
+  left: 0px;
+  right: 0px;
+  top: 0px;
+  z-index: 1000;
+}
+
+#logo-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1em;
+}
+
+#logo {
+  width: 30px;
+  height: 30px;
+  margin: 2em 2em 2em 2em;
+}
+
+#logo-text {
+  margin: 1.5em;
+  font-size: 1.5em;
+  color: white;
+}
+
+/** Header **/
+
+/** Navigation Header **/
+
+.nav {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.nav header {
+  visibility: hidden;
+}
+
+.nav ul {
+  display: flex;
+  list-style: none;
+  padding: 0em;
+  margin: 0;
+}
+
+.nav li {
+  margin: 0 2em;
+}
+
+.nav li a {
+  color: grey;
+  text-decoration: none;
+}
+
+nav li a:hover {
+  color: white;
+}
+
+/** Navigation Header **/
+
+/** Main element: controls sidebar and panel to the right **/
+
+main {
+  display: flex;
+  flex-direction: flex-start;
+  margin-top: 14em;
+  margin-left: 8.6em;
+}
+
+/** hr elements **/
+
+hr {
+  opacity: 10%;
+}
+
+/** hr elements **/
+
+/** Main element: controls sidebar and panel to the right **/
+
+/** Sidebar **/
+
+.navbar {
+  display: flex;
+  flex-direction: column;
+  font-size: 1em;
+  color: white;
+  padding: 1em;
+  width: 250px;
+  max-width: 450px;
+  box-sizing: border-box;
+  margin: 1em;
+  position: relative;
+  text-align: left;
+  left: 0;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  text-align: left;
+  font-size: 0.9em;
+  line-height: 30px;
+  width: 100%;
+  white-space: normal;
+}
+
+.navbar a:hover {
+  color: #699ce9;
+}
+
+.navbar h2 {
+  color: cyan;
+  font-size: 1.5em;
+  text-wrap: wrap;
+  width: 75%;
+}
+
+/** Sidebar **/
+
+/** Text container **/
+
+.content-container {
+  padding: 1em;
+  margin: 1em 1em 1em 4em;
+  color: white;
+  flex-grow: 1;
+  display: block;
+  width: auto;
+  max-width: 950px;
+}
+
+#main-doc header {
+  color: cyan;
+  text-align: left;
+  font-size: 1.8em;
+  font-weight: bold;
+}
+
+h2 {
+  color: cyan;
+  font-size: 1.5em;
+}
+
+/** Text container **/
+
+/** Text container: highlight **/
+
+.highlight-div {
+  border: 1px solid #1ea4f1;
+  border-radius: 8px;
+  margin-bottom: 1em;
+}
+
+.highlight {
+  background-color: #153242;
+  border-radius: 8px;
+  padding: 1em;
+  margin: 0px;
+}
+
+.highlight-div ul {
+  list-style: circle;
+  padding: 0;
+  margin: 1em 2em;
+}
+
+.highlight-div li {
+  margin-bottom: 0.5em;
+}
+
+.highlight-div a {
+  color: #1ea4f1;
+  text-decoration: none;
+}
+
+.highlight-div a:hover {
+  text-decoration: underline;
+}
+
+.highlight-div p:not(.highlight) {
+  padding: 0;
+  margin: 1em 2em;
+}
+
+.highlight-img {
+  margin-right: 1em;
+  width: 20%;
+  height: auto;
+  align: left;
+}
+
+/** Text container: highlight **/
+
+/** Text container: important **/
+
+.important-div {
+  border: 1px solid #c5710a;
+  border-radius: 8px;
+  margin-bottom: 1em;
+}
+
+.important-p {
+  font-size: 1.2em;
+  background-color: #472c21;
+  border-radius: 8px;
+  padding: 1em;
+  margin: 0px;
+}
+
+.important-div p:not(.important-p) {
+  padding: 0;
+  margin: 1em 2em;
+}
+
+/** Text container: important **/
+
+/** Image of APU and ECAM  **/
+
+#apu-test,
+#ecam-apu {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+}
+
+/** Image of APU and ECAM  **/
+
+/** Important container with image inside and text to the right **/
+
+.p-apu-text {
+  display: flex;
+  flex-direction: column;
+  color: white;
+}
+
+.highlightimg-div {
+  border: 1px solid #1ea4f1;
+  border-radius: 8px;
+  margin-bottom: 1em;
+}
+
+.highlightimg {
+  background-color: #153242;
+  border-radius: 8px;
+  padding: 1em;
+  margin: 0px;
+}
+
+.highlight-content {
+  display: flex;
+  align-items: flex-start;
+  padding: 1em;
+  margin: 0px;
+}
+
+/** Important container with image inside and text to the right **/
+
+/** To do: styling for expandable-apu **/
+
+/* Footer */
+footer {
+  background-color: #0e131b;
+  color: #fff;
+  padding: 2em 10em;
+  position: relative;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  z-index: 1000;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+footer span {
+  margin: 0 1em;
+}
+
+footer a {
+  color: grey;
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: cyan;
+}
